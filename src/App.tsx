@@ -6,15 +6,8 @@ import Portfolio from './portfolio';
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1>My Portfolio</h1>
-      </header>
-      <main>
-        <Portfolio />
-      </main>
-      <footer>
-        <p>&copy; 2023 My Portfolio</p>
-      </footer>
+      <title>QT-Portfolio</title>
+      <Portfolio />
     </div>
   );
 }
