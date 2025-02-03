@@ -1,0 +1,12 @@
+import React from 'react'
+
+function HomeComponent() {
+    return (
+        <video autoPlay loop muted className="absolute inset-0 w-full h-full object-cover">
+            <source src="/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    )
+}
+
+export default HomeComponent

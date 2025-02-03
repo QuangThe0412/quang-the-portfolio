@@ -48,3 +48,14 @@ section:target {
     opacity: 1;
   }
 }
+
+@font-face {
+  src: url('./fzcjljt.woff') format('woff');
+  font-family: 'fzcjljt';
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'fzcjljt', sans-serif;
+}

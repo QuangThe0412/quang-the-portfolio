@@ -1,50 +1,62 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { Component, useEffect } from "react";
 import './portfolio.css';
-import CircleNav from "./circle-nav";
+import LeftMenu from "./left-menu";
+import ContentBox from "./content-box";
+import HeaderContent from "./header-content";
+import HomeComponent from "./home-component";
+import SkillComponent from "./skill-component";
+import WorkExComponent from "./work-ex-component";
+import EduComponent from "./edu-component";
+import ContactComponent from "./contact-component";
+import useMenuStore from "./store";
 
-const navItems = ['section1', 'section2', 'section3'];
+interface Item {
+    titleEn: string;
+    titleVn: string;
+    id: string;
+    container?: JSX.Element;
+}
+
+export const MenuItems: Item[] = [
+    {
+        titleEn: 'Home',
+        titleVn: 'Trang Chủ',
+        id: 'home',
+        container: <HomeComponent />,
+    },
+    {
+        titleEn: 'Skill',
+        titleVn: 'Kỹ Năng',
+        id: 'skill',
+        container: <SkillComponent />,
+    },
+    {
+        titleEn: 'Work Experience',
+        titleVn: 'Kinh Nghiệm Làm Việc',
+        id: 'work-experience',
+        container: <WorkExComponent />,
+    },
+    {
+        titleEn: 'Education',
+        titleVn: 'Học Vấn',
+        id: 'education',
+        container: <EduComponent />,
+    },
+    {
+        titleEn: 'Contact Me',
+        titleVn: 'Liên Hệ',
+        id: 'contact',
+        container: <ContactComponent />,
+    },
+];
 
 const Portfolio = () => {
-    const [activeSection, setActiveSection] = useState(navItems[0]);
-    const sectionsRef = useRef<(HTMLElement | null)[]>([]);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
-                    }
-                });
-            },
-            { threshold: 0.6 }
-        );
-
-        sectionsRef.current.forEach(section => {
-            if (section) observer.observe(section);
-        });
-
-        return () => {
-            sectionsRef.current.forEach(section => {
-                if (section) observer.unobserve(section);
-            });
-        };
-    }, []);
-
     return (
         <>
-            <CircleNav />
-            <div className="relative h-screen snap-y snap-mandatory overflow-y-scroll">
-                {navItems.map((item, index) => (
-                    <section
-                        key={index}
-                        id={item}
-                        ref={el => sectionsRef.current[index] = el}
-                        className="h-screen snap-start flex items-center justify-center bg-gray-200"
-                    >
-                        <h1 className="text-black">{item}</h1>
-                    </section>
-                ))}
+            <HeaderContent />
+            <div className="relative h-screen w-screen">
+                <LeftMenu />
+                <ContentBox />
             </div>
         </>
     );
