@@ -5,7 +5,8 @@ import { MenuItems } from './portfolio';
 
 function LeftMenu() {
     const initialChooseId = window.location.hash ? window.location.hash.substring(1) : 'home';
-    const [activeId, setActiveId] = useState<string | null>(initialChooseId);
+    const activeId = useMenuStore((state) => state.activeId);
+    const setActiveId = useMenuStore((state) => state.setActiveId);
     const chooseId = useMenuStore((state) => state.chooseId);
     const setChooseId = useMenuStore((state) => state.setChooseId);
     const lineRef = useRef<HTMLDivElement>(null);
@@ -34,7 +35,7 @@ function LeftMenu() {
     }, [activeId]);
 
     return (
-        <div className="leftbox needLangclassName zh" data-init="1">
+        <div className="leftbox" data-init="1">
             <div className="con">
                 <div className="sideNav">
                     <div className="navlist">

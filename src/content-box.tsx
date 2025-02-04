@@ -3,7 +3,6 @@ import { MenuItems } from './portfolio';
 
 function ContentBox() {
     const chooseId = useMenuStore((state) => state.chooseId);
-    console.log({ chooseId })
 
     return (
         <>
