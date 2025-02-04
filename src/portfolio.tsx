@@ -6,7 +6,6 @@ import HeaderContent from "./header-content";
 import HomeComponent from "./home-component";
 import SkillComponent from "./skill-component";
 import WorkExComponent from "./work-ex-component";
-import EduComponent from "./edu-component";
 import ContactComponent from "./contact-component";
 import useMenuStore from "./store";
 
@@ -25,22 +24,16 @@ export const MenuItems: Item[] = [
         container: <HomeComponent />,
     },
     {
-        titleEn: ' TECHNICAL SKILLS',
+        titleEn: 'SKILLS',
         titleVn: 'Kỹ Năng',
         id: 'skill',
         container: <SkillComponent />,
     },
     {
-        titleEn: 'PROFESSIONAL EXPERIENCE',
+        titleEn: 'EXPERIENCE',
         titleVn: 'Kinh Nghiệm Làm Việc',
         id: 'work-experience',
         container: <WorkExComponent />,
-    },
-    {
-        titleEn: 'Education',
-        titleVn: 'Học Vấn',
-        id: 'education',
-        container: <EduComponent />,
     },
     {
         titleEn: 'Contact Me',

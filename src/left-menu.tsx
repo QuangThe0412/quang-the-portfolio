@@ -28,7 +28,7 @@ function LeftMenu() {
             const activeItem = document.querySelector(`[data-pos="${activeId}"]`);
             if (activeItem) {
                 const rect = activeItem.getBoundingClientRect();
-                const top = rect.top - 390;
+                const top = rect.top - 415;
                 lineRef.current.style.top = `${top}px`;
             }
         }
@@ -48,7 +48,7 @@ function LeftMenu() {
                                 onClick={() => handleOnClick(item.id)}
                             >
                                 <a href={`#${item.id}`} data-pos={item.id} className="txt" data-lang={index}>
-                                    {item.titleEn}
+                                    {item.titleVn}
                                 </a>
                             </div>
                         ))}

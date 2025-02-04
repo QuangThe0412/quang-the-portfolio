@@ -46,7 +46,7 @@
 
 .leftbox .sideNav .navlist .line {
     position: absolute;
-    left: -5.5rem;
+    left: -5rem;
     width: 10rem;
     height: 20rem;
     background: url('./image/nav/nav-on.png') no-repeat center;
@@ -84,10 +84,11 @@
 }
 
 .leftbox .sideNav::after {
+    display: none;
     content: "";
     position: absolute;
     top: -55%;
-    left: 20%;
+    left: 16%;
     width: 2rem;
     height: 70vh;
     background: url('./image/nav/sidenav-line.png') 0% 0% / 100% 100% no-repeat;
