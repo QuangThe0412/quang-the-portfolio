@@ -12,6 +12,7 @@ import intellij from './image/logo/IntelliJ IDEA.jpg'
 import vs from './image/logo/Visual Studio.jpg'
 import vscode from './image/logo/vs code.jpg'
 import { useHeaderStore } from './store-header'
+import RainComponent from './rain'
 
 function SkillComponent() {
     const lang = useHeaderStore((state) => state.lang);
@@ -21,6 +22,7 @@ function SkillComponent() {
 
     return (
         <div className="skill-container">
+            <RainComponent />
             <div className="skill-list">
                 <div className="skill-item">
                     <h3>{text1}</h3>
