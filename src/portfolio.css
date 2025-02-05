@@ -1,8 +1,19 @@
 .btn-header-style {
+    --size-txt: 64px;
     background-image: url('./image/bg/bgm-bg.png');
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    min-width: var(--size-txt);
+
+}
+
+.btn-header-style span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: var(--size-txt);
+    color: #fff;
+    opacity: 0.5;
 }
 
 .content-box {

@@ -31,7 +31,7 @@ export const MenuItems: Item[] = [
     },
     {
         titleEn: 'EXPERIENCE',
-        titleVn: 'Kinh Nghiệm Làm Việc',
+        titleVn: 'Kinh Nghiệm',
         id: 'work-experience',
         container: <WorkExComponent />,
     },

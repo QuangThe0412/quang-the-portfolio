@@ -1,13 +1,15 @@
 .skill-container {
   height: 100%;
   width: 100%;
+  background-image: url('./image/bg/bg-skill.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .skill-list {
   display: flex;
   justify-content: space-around;
   padding: 10%;
-  background-color: #f9f9f9;
   border-radius: 8px;
   flex-direction: column;
   height: 100%;
@@ -23,6 +25,8 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 50%;
   margin-left: auto;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
 .skill-item h3 {
@@ -45,10 +49,18 @@
   flex-basis: calc(33.333% - 20px);
   max-width: calc(33.333% - 20px);
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 .skill-item img {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }

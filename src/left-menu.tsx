@@ -1,15 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import './left-menu.css';
 import useMenuStore from './store';
 import { MenuItems } from './portfolio';
+import { useHeaderStore } from './store-header';
 
 function LeftMenu() {
-    const initialChooseId = window.location.hash ? window.location.hash.substring(1) : 'home';
     const activeId = useMenuStore((state) => state.activeId);
     const setActiveId = useMenuStore((state) => state.setActiveId);
     const chooseId = useMenuStore((state) => state.chooseId);
     const setChooseId = useMenuStore((state) => state.setChooseId);
     const lineRef = useRef<HTMLDivElement>(null);
+    const lang = useHeaderStore((state) => state.lang);
 
     const handleMouseEnter = (id: string) => {
         setActiveId(id);
@@ -48,7 +49,7 @@ function LeftMenu() {
                                 onClick={() => handleOnClick(item.id)}
                             >
                                 <a href={`#${item.id}`} data-pos={item.id} className="txt" data-lang={index}>
-                                    {item.titleVn}
+                                    {lang === 'vi' ? item.titleVn : item.titleEn}
                                 </a>
                             </div>
                         ))}

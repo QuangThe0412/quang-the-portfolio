@@ -1,33 +1,36 @@
-import bgBtn from './image/bg/bgm-bg.png';
+import { useEffect } from 'react';
 import soundIconOff from './image/icons/sound-off.png';
 import soundIconOn from './image/icons/sound-on.png';
-import langEn from './image/icons/en-on.png';
-import langVN from './image/icons/chinese-on.png';
-import { useState } from 'react';
+import { useHeaderStore } from './store-header';
 
 function HeaderContent() {
-    const [sound, setSound] = useState(false);
-    const [lang, setLang] = useState('en');
+    const { sound, setSound, lang, setLang } = useHeaderStore();
+
     const soundIcon = sound ? soundIconOn : soundIconOff;
-    const langIcon = lang === 'en' ? langEn : langVN;
 
     const onClickSound = () => {
         setSound(!sound);
     }
 
     const onClickLang = () => {
-        setLang(lang === 'en' ? 'vn' : 'en');
-    }
+        const newLang = lang === 'en' ? 'vi' : 'en';
+        setLang(newLang);
+        const searchParams = new URLSearchParams(window.location.search);
+        searchParams.set('lang', newLang);
+        const newUrl = `${window.location.pathname}?${searchParams.toString()}${window.location.hash}`;
+        window.history.replaceState(null, '', newUrl);
+        window.location.reload();
+    };
 
     return (
-        <div className="fixed z-40 flex justify-between items-center p-4 bg-transparent w-full">
-            <div className="text-2xl font-bold animate-text">QT</div>
+        <div className="fixed z-40 flex justify-between items-center p-5 bg-transparent w-full">
+            <div className="text-2xl font-bold animate-text"></div>
             <div className="flex space-x-4">
                 <div className="btn-header-style" onClick={onClickSound}>
                     <img src={soundIcon} alt="sound" />
                 </div>
                 <div className="btn-header-style" onClick={onClickLang}>
-                    <img src={langIcon} alt="lang" />
+                    <span>{lang}</span>
                 </div>
             </div>
         </div>

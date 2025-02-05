@@ -11,13 +11,19 @@ import npm from './image/logo/npm.png'
 import intellij from './image/logo/IntelliJ IDEA.jpg'
 import vs from './image/logo/Visual Studio.jpg'
 import vscode from './image/logo/vs code.jpg'
+import { useHeaderStore } from './store-header'
 
 function SkillComponent() {
+    const lang = useHeaderStore((state) => state.lang);
+    const text1 = lang === 'en' ? 'Programming Languages' : 'Ngôn Ngữ Lập Trình';
+    const text2 = lang === 'en' ? 'Frameworks & Libraries' : 'Frameworks & Thư Viện';
+    const text3 = lang === 'en' ? 'Tools & Platforms' : 'Công Cụ & Nền Tảng';
+
     return (
         <div className="skill-container">
             <div className="skill-list">
                 <div className="skill-item">
-                    <h3>Programming Languages</h3>
+                    <h3>{text1}</h3>
                     <ul>
                         <li>
                             <img src={java} alt="Java" />
@@ -31,7 +37,7 @@ function SkillComponent() {
                     </ul>
                 </div>
                 <div className="skill-item">
-                    <h3>Frameworks & Libraries</h3>
+                    <h3>{text2}</h3>
                     <ul>
                         <li>
                             <img src={react} alt="ReactJS" />
@@ -45,7 +51,7 @@ function SkillComponent() {
                     </ul>
                 </div>
                 <div className="skill-item">
-                    <h3>Tools & Platforms</h3>
+                    <h3>{text3}</h3>
                     <ul>
                         <li>
                             <img src={webpack} alt="Webpack" />

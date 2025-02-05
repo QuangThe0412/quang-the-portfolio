@@ -1,0 +1,28 @@
+.work-ex-container {
+  height: 100%;
+  width: 100%;
+}
+
+.wraper-img {
+  height: 100%;
+}
+
+.wraper-img img {
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-left: auto;
+}
+
+.wraper-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  top: 20%;
+  right: 30%;
+  position: absolute;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+}
