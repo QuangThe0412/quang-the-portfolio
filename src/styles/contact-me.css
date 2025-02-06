@@ -1,5 +1,5 @@
 .contact-container {
-  background-image: url('./image/bg/contact.jpg');
+  background-image: url('../image/bg/contact.jpg');
   height: 100%;
   display: flex;
   justify-content: center;
@@ -59,7 +59,7 @@
 }
 
 .footer {
-  background-image: url('./image/bg/footer-bg.png');
+  background-image: url('../image/bg/footer-bg.png');
   background-size: cover;
   background-position: center;
   color: white;

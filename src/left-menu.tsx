@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import './left-menu.css';
+import './styles/left-menu.css';
 import useMenuStore from './store';
 import { MenuItems } from './portfolio';
 import { useHeaderStore } from './store-header';
@@ -36,7 +36,7 @@ function LeftMenu() {
     }, [activeId]);
 
     return (
-        <div className="leftbox" data-init="1">
+        <div className="leftbox hidden md:block" data-init="1">
             <div className="con">
                 <div className="sideNav">
                     <div className="navlist">

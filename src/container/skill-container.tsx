@@ -1,20 +1,20 @@
-import './skill.css'
-import java from './image/logo/java.jpg'
-import js from './image/logo/js.jpg'
-import csharp from './image/logo/csharp.jpg'
-import react from './image/logo/reactjs.jpg'
-import spring from './image/logo/springboot.jpg'
-import mvc from './image/logo/mvc.jpg'
-import webpack from './image/logo/webpack.jpg'
-import yarn from './image/logo/yarn.png'
-import npm from './image/logo/npm.png'
-import intellij from './image/logo/IntelliJ IDEA.jpg'
-import vs from './image/logo/Visual Studio.jpg'
-import vscode from './image/logo/vs code.jpg'
-import { useHeaderStore } from './store-header'
-import RainComponent from './rain'
+import '../styles/skill.css'
+import java from '../image/logo/java.jpg'
+import js from '../image/logo/js.jpg'
+import csharp from '../image/logo/csharp.jpg'
+import react from '../image/logo/reactjs.jpg'
+import spring from '../image/logo/springboot.jpg'
+import mvc from '../image/logo/mvc.jpg'
+import webpack from '../image/logo/webpack.jpg'
+import yarn from '../image/logo/yarn.png'
+import npm from '../image/logo/npm.png'
+import intellij from '../image/logo/IntelliJ IDEA.jpg'
+import vs from '../image/logo/Visual Studio.jpg'
+import vscode from '../image/logo/vs code.jpg'
+import { useHeaderStore } from '../store-header'
+import RainComponent from '../rain'
 
-function SkillComponent() {
+function SkillContainer() {
     const lang = useHeaderStore((state) => state.lang);
     const text1 = lang === 'en' ? 'Programming Languages' : 'Ngôn Ngữ Lập Trình';
     const text2 = lang === 'en' ? 'Frameworks & Libraries' : 'Frameworks & Thư Viện';
@@ -22,7 +22,7 @@ function SkillComponent() {
 
     return (
         <div className="skill-container">
-            <RainComponent />
+            {/* <RainComponent /> */}
             <div className="skill-list">
                 <div className="skill-item">
                     <h3>{text1}</h3>
@@ -80,4 +80,4 @@ function SkillComponent() {
     )
 }
 
-export default SkillComponent
+export default SkillContainer

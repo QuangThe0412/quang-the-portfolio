@@ -1,12 +1,12 @@
 import React from 'react';
 import { Chrono } from 'react-chrono';
-import './work-ex.css';
-import imgLeft from './image/bg/solo1.jpeg';
-import { useHeaderStore } from './store-header';
+import '../styles/work-ex.css';
+import imgLeft from '../image/bg/solo2.png';
+import { useHeaderStore } from '../store-header';
 
-const WorkExComponent: React.FC = () => {
+const WorkExContainer: React.FC = () => {
     const lang = useHeaderStore((state) => state.lang);
-    const sub1 = lang === 'en' ? 'Tech Stack: .NET MVC, JavaScript, React.js, SQL' : 'Công Nghệ: .NET MVC, JavaScript, React.js, SQL';
+    const sub1 = lang === 'en' ? 'Tech Stack: .NET MVC, JavaScript, SQL' : 'Công Nghệ: .NET MVC, JavaScript, SQL';
     const sub2 = lang === 'en' ? 'Tech Stack: Node.js, Express.js, Java, React.js' : 'Công Nghệ: Node.js, Express.js, Java, React.js';
     const detail11 = lang === 'en' ? 'Delivered 15+ core features for web/mobile platforms, improving user engagement by 30%.'
         : 'Đã phát triển 15+ tính năng chính cho các nền tảng web / di động, cải thiện tương tác người dùng lên đến 30%.';
@@ -25,7 +25,7 @@ const WorkExComponent: React.FC = () => {
 
     const items = [
         {
-            title: "2022 - 2024",
+            title: "08/2022 - 09/2024",
             cardTitle: "DAITRUONGPHAT SOLUTION (Education Sector) - Junior Full-Stack Developer",
             cardSubtitle: sub1,
             cardDetailedText: (
@@ -38,7 +38,7 @@ const WorkExComponent: React.FC = () => {
             )
         },
         {
-            title: "2023 - Present",
+            title: "09/2024 - 12/2024",
             cardTitle: "Z-Network (Freelance Team) - Backend Developer ",
             cardSubtitle: sub2,
             cardDetailedText: (
@@ -63,4 +63,4 @@ const WorkExComponent: React.FC = () => {
     );
 }
 
-export default WorkExComponent;
+export default WorkExContainer;

@@ -1,11 +1,10 @@
 .btn-header-style {
     --size-txt: 64px;
-    background-image: url('./image/bg/bgm-bg.png');
+    background-image: url('../image/bg/bgm-bg.png');
     background-size: cover;
     background-position: center;
     cursor: pointer;
     min-width: var(--size-txt);
-
 }
 
 .btn-header-style span {
@@ -20,10 +19,15 @@
     display: none;
     height: 101%;
     width: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    /* Add transition for opacity */
 }
 
 .content-box.active {
     display: block;
+    opacity: 1;
+    /* Set opacity to 1 when active */
 }
 
 .scrollbar-hide {

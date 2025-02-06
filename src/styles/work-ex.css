@@ -1,6 +1,10 @@
 .work-ex-container {
   height: 100%;
   width: 100%;
+  /* background-color: antiquewhite; */
+  background-image: url('../image/bg/pop-bg3.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .wraper-img {
@@ -25,4 +29,15 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.8);
+  z-index: 88;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .wraper-box {
+    width: 100%;
+    right: 0;
+    top: 0;
+    height: 99%;
+  }
 }

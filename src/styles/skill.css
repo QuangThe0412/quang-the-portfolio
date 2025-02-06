@@ -1,7 +1,7 @@
 .skill-container {
   height: 100%;
   width: 100%;
-  background-image: url('./image/bg/bg-skill.jpg');
+  background-image: url('../image/bg/bg-1.jpg');
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -26,8 +26,8 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 50%;
   margin-left: auto;
-  opacity: 0;
   animation: fadeIn 2s ease-in-out forwards;
+  background-color: #f0ffff6b;
 }
 
 .skill-item h3 {
@@ -63,5 +63,22 @@
 @keyframes fadeIn {
   to {
     opacity: 1;
+  }
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .skill-item {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .skill-item h3 {
+    font-size: 1.5em;
+  }
+
+  .skill-item img {
+    width: 3rem;
+    height: 3rem;
   }
 }

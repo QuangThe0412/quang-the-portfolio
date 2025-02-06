@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import './rain.css';
+import { useEffect } from 'react';
+import './styles/rain.css';
 
 function RainComponent() {
     useEffect(() => {

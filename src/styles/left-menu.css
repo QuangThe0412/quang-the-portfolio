@@ -5,7 +5,7 @@
     z-index: 19;
     width: 50%;
     height: 100%;
-    background: url('./image/nav/sidenav-bg.png') no-repeat left center;
+    background: url('../image/nav/sidenav-bg.png') no-repeat left center;
     background-size: cover;
     pointer-events: none;
 }
@@ -49,7 +49,7 @@
     left: -5rem;
     width: 10rem;
     height: 20rem;
-    background: url('./image/nav/nav-on.png') no-repeat center;
+    background: url('../image/nav/nav-on.png') no-repeat center;
     background-size: 100% 100%;
     pointer-events: none;
     transition: top .3s;
@@ -91,5 +91,5 @@
     left: 16%;
     width: 2rem;
     height: 70vh;
-    background: url('./image/nav/sidenav-line.png') 0% 0% / 100% 100% no-repeat;
+    background: url('../image/nav/sidenav-line.png') 0% 0% / 100% 100% no-repeat;
 }

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './contact-me.css';
+import '../styles/contact-me.css';
 import { TypeAnimation } from 'react-type-animation';
-import { useHeaderStore } from './store-header';
+import { useHeaderStore } from '../store-header';
 
-const ContactComponent: React.FC = () => {
+const ContactContainer: React.FC = () => {
     const lang = useHeaderStore((state) => state.lang);
     const text1 = lang === 'en' ? 'Dont be shy!' : 'Đừng ngần ngại!';
     const text2 = lang === 'en' ? 'Contact me.' : 'Liên hệ với tôi.';
@@ -84,4 +84,4 @@ const ContactComponent: React.FC = () => {
     );
 };
 
-export default ContactComponent;
+export default ContactContainer;

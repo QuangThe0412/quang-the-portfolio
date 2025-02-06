@@ -1,9 +1,15 @@
 import { TypeAnimation } from 'react-type-animation'
-import './home.css'
-import { useHeaderStore } from './store-header';
+import '../styles/home.css'
+import { useHeaderStore } from '../store-header';
+import soundOff from '../image/icons/sound-off.png';
+import soundOn from '../image/icons/sound-on.png';
+import { useRef } from 'react';
 
-function HomeComponent() {
-    const lang = useHeaderStore((state) => state.lang);
+function HomeContainer() {
+    const { sound, setSound, lang } = useHeaderStore();
+    const overlayRef = useRef<HTMLDivElement | null>(null);
+
+    const soundIcon = sound ? soundOn : soundOff;
     const text1 = lang === 'en'
         ? 'Hello! I am The Ngo Quang'
         : 'Xin chào! Tôi là Ngô Quang Thế';
@@ -15,8 +21,22 @@ function HomeComponent() {
     const text3 = lang === 'en'
         ? 'Nice to work with you'
         : 'Rất mong được hợp tác cùng bạn! 😊';
+
+    const handleClickSoundOverLay = () => {
+        setSound(!sound)
+        if (overlayRef.current) {
+            overlayRef.current.style.display = 'none';
+        }
+    }
+
+
     return (
-        <>
+        <div className='home-container'>
+            <div ref={overlayRef} className='home-overlay'>
+                <div className='sound-logo' onClick={handleClickSoundOverLay}>
+                    <img src={soundIcon} alt='sound' />
+                </div>
+            </div>
             <video autoPlay loop muted className="absolute inset-0 w-full h-full object-cover">
                 <source src="/video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -31,8 +51,8 @@ function HomeComponent() {
                     className="type-animation"
                 />
             </div>
-        </>
+        </div>
     )
 }
 
-export default HomeComponent
+export default HomeContainer
