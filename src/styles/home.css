@@ -23,7 +23,7 @@
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  background-image: url('../image/bg/bgm-bg.png');
+  background-image: url("../image/bg/bgm-bg.png");
   scale: 3;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .home-text {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   position: absolute;
   right: 5%;
   bottom: 5%;
@@ -57,5 +57,9 @@
 @media (max-width: 768px) {
   .type-animation {
     font-size: 1rem;
+  }
+
+  .home-text {
+    margin-bottom: 20px;
   }
 }

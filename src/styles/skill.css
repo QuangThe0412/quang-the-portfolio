@@ -1,7 +1,7 @@
 .skill-container {
   height: 100%;
   width: 100%;
-  background-image: url('../image/bg/bg-1.jpg');
+  background-image: url("../image/bg/bg-1.jpg");
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -71,6 +71,7 @@
   .skill-item {
     width: 100%;
     margin-left: 0;
+    margin-bottom: 35px;
   }
 
   .skill-item h3 {

@@ -1,43 +1,60 @@
 .btn-header-style {
-    --size-txt: 64px;
-    background-image: url('../image/bg/bgm-bg.png');
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    min-width: var(--size-txt);
+  --size-txt: 64px;
+  background-image: url("../image/bg/bgm-bg.png");
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  min-width: var(--size-txt);
 }
 
 .btn-header-style span {
-    font-size: 1rem;
-    text-transform: uppercase;
-    line-height: var(--size-txt);
-    color: #fff;
-    opacity: 0.5;
+  font-size: 1rem;
+  text-transform: uppercase;
+  line-height: var(--size-txt);
+  color: #fff;
+  opacity: 0.5;
 }
 
 .content-box {
-    display: none;
-    height: 101%;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
-    /* Add transition for opacity */
+  display: none;
+  height: 101%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  /* Add transition for opacity */
 }
 
 .content-box.active {
-    display: block;
-    opacity: 1;
-    /* Set opacity to 1 when active */
+  display: block;
+  opacity: 1;
+  /* Set opacity to 1 when active */
 }
 
 .scrollbar-hide {
-    -ms-overflow-style: none;
-    /* Internet Explorer 10+ */
-    scrollbar-width: none;
-    /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-    /* Safari and Chrome */
+  display: none;
+  /* Safari and Chrome */
+}
+
+/* Bottom menu bar styles */
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button span {
+  margin-top: 4px;
+  font-size: 0.75rem;
 }

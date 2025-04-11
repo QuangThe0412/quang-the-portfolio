@@ -1,18 +1,21 @@
-import useMenuStore from './store';
-import { MenuItems } from './portfolio';
+import useMenuStore from "./store";
+import { MenuItems } from "./portfolio";
 
 function ContentBox() {
-    const chooseId = useMenuStore((state) => state.chooseId);
+  const chooseId = useMenuStore((state) => state.chooseId);
 
-    return (
-        <>
-            {MenuItems.map((item) => (
-                <div key={item.id} className={`content-box ${chooseId === item.id ? 'active' : ''}`}>
-                    {item.container}
-                </div>
-            ))}
-        </>
-    )
+  return (
+    <>
+      {MenuItems.map((item) => (
+        <div
+          key={item.id}
+          className={`content-box ${chooseId === item.id ? "active" : ""}`}
+        >
+          {item.container}
+        </div>
+      ))}
+    </>
+  );
 }
 
-export default ContentBox
+export default ContentBox;
