@@ -11,4 +11,4 @@ docker push quangthe0412/portfolio:latest
 docker pull quangthe0412/portfolio:latest
 
 #Docker run
-docker run -d -p 3000:80 quangthe0412/portfolio:latest
+docker run -d -p 3000:80 --restart unless-stopped quangthe0412/portfolio:latest
